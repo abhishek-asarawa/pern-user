@@ -15,4 +15,7 @@ routes.post(
   userController.addUser
 );
 
+// all users
+routes.get("/total", userController.countUser);
+
 export default routes;

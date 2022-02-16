@@ -19,6 +19,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var routes = (0, _express.Router)(); // add user
 
-routes.post("/signup", _validators.userValidation.signup, _checkValidationError.default, _custom.getUserData, _controllers.userController.addUser);
+routes.post("/signup", _validators.userValidation.signup, _checkValidationError.default, _custom.getUserData, _controllers.userController.addUser); // all users
+
+routes.get("/total", _controllers.userController.countUser);
 var _default = routes;
 exports.default = _default;

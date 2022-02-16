@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.addUser = void 0;
+exports.countUser = exports.addUser = void 0;
 
 var _lodash = require("lodash");
 
@@ -73,3 +73,32 @@ var addUser = (0, _funcWrapper.default)( /*#__PURE__*/function () {
   };
 }());
 exports.addUser = addUser;
+var countUser = (0, _funcWrapper.default)( /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(req, res, next) {
+    var total;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _methods.userMethods.totalUsers();
+
+          case 2:
+            total = _context2.sent;
+            (0, _response.default)(res, {
+              total: total
+            }, "Total users.");
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x4, _x5, _x6) {
+    return _ref2.apply(this, arguments);
+  };
+}());
+exports.countUser = countUser;

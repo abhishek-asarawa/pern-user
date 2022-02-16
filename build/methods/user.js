@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.findUserById = exports.findUserByEmail = exports.add = void 0;
+exports.totalUsers = exports.findUserById = exports.findUserByEmail = exports.add = void 0;
 
 var _user = _interopRequireDefault(require("../models/user"));
 
@@ -34,3 +34,9 @@ var findUserById = function findUserById(id) {
 };
 
 exports.findUserById = findUserById;
+
+var totalUsers = function totalUsers() {
+  return _user.default.countDocuments();
+};
+
+exports.totalUsers = totalUsers;

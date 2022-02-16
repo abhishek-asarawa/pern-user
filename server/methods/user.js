@@ -11,3 +11,7 @@ export const findUserByEmail = (email) => {
 export const findUserById = (id) => {
   return userModel.findById(id);
 };
+
+export const totalUsers = () => {
+  return userModel.countDocuments();
+};
