@@ -18,6 +18,9 @@ import { authRoutes } from "./routes";
 // connecting to database
 import "./database";
 import path from "path";
+import processError from "./utils/dbErrorProcessing";
+import syncTable from "./models/postgres";
+import db from "./config/db";
 
 dotenv.config();
 
@@ -53,6 +56,10 @@ app.use("/api/*", (req, res, next) => {
 app.use((err, req, res, next) => {
   logger.error(err);
 
+  const message = processError(err); //* if error comes from sequelize
+
+  if (message) return response(res, null, message, true, 400);
+
   if (err.message === "Path not found")
     return response(res, null, "Path not found", true, 404);
 
@@ -64,4 +71,13 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "../src/build", "index.html"));
 });
 
-app.listen(port, logger.info(`Server running on ${port}`));
+// starting server
+(async () => {
+  try {
+    if (db === "postgres") await syncTable();
+    app.listen(port, logger.info(`Server running on ${port}`));
+  } catch (err) {
+    logger.error(err);
+    process.exit(1); //* Existing process
+  }
+})();

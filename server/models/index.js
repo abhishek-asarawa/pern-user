@@ -1,1 +1,2 @@
-export * as userModel from "./user";
+export * as mongoModels from "./mongo";
+export * as postgresModels from "./postgres";

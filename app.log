@@ -17,3 +17,38 @@
 2022-02-16T12:56:04.391Z [ERROR  ] - Path not found
 2022-02-16T12:56:41.805Z [INFO   ] - database is connected
 2022-02-16T12:56:41.813Z [INFO   ] - Server running on 3000
+2022-02-17T05:19:39.537Z [INFO   ] - database is connected
+2022-02-17T05:19:39.545Z [INFO   ] - Server running on 3000
+2022-02-17T06:14:46.346Z [INFO   ] - Server running on 3000
+2022-02-17T06:26:11.545Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:26:11.554Z [INFO   ] - connected to database
+2022-02-17T06:26:11.557Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:26:11.560Z [INFO   ] - syncing tables with models
+2022-02-17T06:26:11.563Z [INFO   ] - Server running on 3000
+2022-02-17T06:29:22.014Z [ERROR  ] - Operation `users.countDocuments()` buffering timed out after 10000ms
+2022-02-17T06:40:47.101Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:40:47.105Z [INFO   ] - connected to database
+2022-02-17T06:40:47.110Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test-users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:40:47.122Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:41:45.785Z [INFO   ] - connected to database
+2022-02-17T06:41:45.809Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:42:14.480Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:42:14.484Z [INFO   ] - connected to database
+2022-02-17T06:42:14.490Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test-users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:42:14.497Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:42:46.014Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:42:46.017Z [INFO   ] - connected to database
+2022-02-17T06:42:46.023Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test-users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:42:46.034Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:43:31.967Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:43:31.972Z [INFO   ] - connected to database
+2022-02-17T06:43:31.980Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test-users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:43:31.990Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:45:46.285Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:45:46.289Z [INFO   ] - connected to database
+2022-02-17T06:45:46.295Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test_users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:45:46.304Z [ERROR  ] - syntax error at or near "NOT"
+2022-02-17T06:48:11.634Z [INFO   ] - Executing (default): SELECT 1+1 AS result
+2022-02-17T06:48:11.638Z [INFO   ] - connected to database
+2022-02-17T06:48:11.645Z [INFO   ] - Executing (default): CREATE TABLE IF NOT EXISTS "test_users" ("id" UUID , "email" VARCHAR(255) NOT NULL UNIQUE, "password"  NOT NULL, "firstName"  NOT NULL, "lastName"  NOT NULL, "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL, "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL, PRIMARY KEY ("id"));
+2022-02-17T06:48:11.653Z [ERROR  ] - syntax error at or near "NOT"
