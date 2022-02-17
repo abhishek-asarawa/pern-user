@@ -1,7 +1,7 @@
 import * as React from "react";
 import Paper from "@mui/material/Paper";
 
-export default function Total() {
+export default function Total({ count }) {
   return (
     <Paper
       elevation={20}
@@ -13,7 +13,7 @@ export default function Total() {
         fontSize: "50px",
       }}
     >
-      Total Users : 10
+      Total Users : {count}
     </Paper>
   );
 }

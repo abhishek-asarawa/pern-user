@@ -6,7 +6,7 @@ export const add = async (data) => {
   const user =
     db !== "postgres"
       ? await MongoUser.create({ ...data })
-      : await SeqUser.create({ ...data }).toJSON();
+      : (await SeqUser.create({ ...data })).toJSON();
   return user;
 };
 
