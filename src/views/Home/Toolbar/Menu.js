@@ -52,13 +52,7 @@ const StyledMenu = styled((props) => (
 
 export default function CustomizedMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [openAdd, setOpenAdd] = React.useState(false);
 
-  const handleOpenAdd = () => {
-    setOpenAdd(true);
-    handleClose();
-  };
-  const handleCloseAdd = () => setOpenAdd(false);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -89,7 +83,7 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleOpenAdd} disableRipple>
+        <MenuItem disableRipple>
           <EditIcon style={{ color: "#0F101A" }} />
           <Typography variant="h6">Add Entry</Typography>
         </MenuItem>
