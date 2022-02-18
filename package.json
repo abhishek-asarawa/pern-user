@@ -47,14 +47,14 @@
     "winston": "^3.6.0"
   },
   "scripts": {
-    "start": "npm run node-build && node build/index.js",
+    "start": "node build/index.js",
     "react-build": "react-scripts build && npm run clear-build && mv build ./src",
     "clear-build": "rm -rf ./src/build",
     "react-dev": "react-scripts start",
     "clean": "rm -rf build",
     "node-dev": "nodemon --exec babel-node ./server/index.js",
     "node-build": "npm run clean && npx babel server --out-dir build",
-    "postbuild": "npm i && npm run react-build"
+    "postbuild": "npm i && npm run react-build && npm run node-build"
   },
   "eslintConfig": {
     "extends": [
